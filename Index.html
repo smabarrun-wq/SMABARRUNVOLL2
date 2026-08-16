@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Terkunci</title>
+</head>
+<body>
+
+    <h2>🔒 Website Terkunci</h2>
+
+    <input type="password" id="password" placeholder="Masukkan password">
+    <button onclick="bukaWebsite()">Buka</button>
+
+    <p id="pesan"></p>
+
+    <script>
+        function bukaWebsite() {
+            const password = document.getElementById("password").value;
+
+            if (password === "12345") {
+                window.location.href = "beranda.html";
+            } else {
+                document.getElementById("pesan").innerText =
+                    "❌ Password salah!";
+            }
+        }
+    </script>
+
+</body>
+</html>
